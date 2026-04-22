@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; text-decoration: none; border: none; outline: none; }
+        html { font-size: 62.5%; scroll-behavior: smooth; }
+        body { background: #e7c6c6; overflow-x: hidden; }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 2.5rem 10%; background: #fff;
+            
+        }
+        header .logo { font-size: 2.5rem; font-weight: 800; color: #000; }
+        header .navbar ul { display: flex; list-style: none; gap: 3rem; }
+        header .navbar ul li a { font-size: 1.6rem; color: #000; font-weight: 600; }
+
+        /* --- HERO SECTION --- */
+        #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;          /* particles BACKGROUND */
+    pointer-events: none;
+}
+
+        .home {
+            position: relative; height: 100vh; display: flex; align-items: center;
+            justify-content: space-between; padding: 0 10%; z-index: 2;
+        }
+        
+
+        .home .content, .home .image, header { pointer-events: auto; }
+        .home .content h2 { font-size: 6rem; color: #002057; font-weight: 900; line-height: 1.1; }
+        .home .content h2.outlined { color: #e72020; -webkit-text-stroke: 1.5px #002057; margin: 0.5rem 0 1.5rem; }
+        .home .content p { font-size: 2.6rem; color: #000; font-weight: 600; }
+        .home .content p span { color: #ca1f1f; }
+
+        .home .content {
+    position: relative;
+    z-index: 4;
+}
+header .navbar ul li a {
+    position: relative;
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.2rem;
+
+    background: transparent;
+    color: #000;
+    font-weight: 600;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+/* hover – light lift */
+header .navbar ul li a:hover {
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* 🔥 CLICK (PRESS INSIDE / DEEP) */
+header .navbar ul li a:active {
+    transform: translateY(4px) scale(0.95);
+    box-shadow:
+        inset 0 6px 14px rgba(0,0,0,0.45),
+        inset 0 -2px 4px rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.4);
+    color: #f5f230;
+}
+
+/* Active navbar link - navy blue box highlight */
+header .navbar ul li a.nav-active {
+    color: #fff;                  /* text white inside box */
+    background: #002057;          /* navy blue box */
+    padding: 0.8rem 1.6rem;       /* same as normal link for box size */
+    border-radius: 1.2rem;        /* rounded corners */
+    font-weight: 700;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+header .navbar ul li a.nav-active:hover {
+    background: #001742; /* slightly darker navy on hover */
+    color: #fff;
+}
+.btn {
+    background: #241568; 
+    color: #fff; 
+    padding: 1.3rem 1.8rem; /* Inga second value-ah (width) kuraichutaen */
+    border-radius: 5rem;
+    display: inline-block; 
+    width: fit-content;    /* Button text-ku thaguntapadi mattum width irukkum */
+    margin-top: 2rem;
+    font-size: 1.6rem; 
+    font-weight: 600;
+    text-decoration: none;
+}
+/* Hover lift and shadow */
+.btn:hover {
+    background: #160c48;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(61, 29, 219, 0.4);
+}
+
+/* 🔥 CLICK Effect from Reference 🔥 */
+.btn:active {
+    transform: scale(0.96) translateY(1px); /* Pressed effect */
+    background-color: #15085e; /* Deeper color */
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.4); /* Inset shadow */
+    transition: 0.1s;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #ffffff; /* Dark theme */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Image-kum Name-kum naduvula gap */
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80px; /* Logo size adjust pannikalam */
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%; /* Image round-ah irukka (optional) */
+}
+
+.logo span {
+    font-size: 4rem;
+    font-weight: 1200;
+    margin-left: 20px;
+    color: #1c0e6a; /* Royal Orange */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Navbar styling (Optional) */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ff4500;
+}
+.yellow-circle {
+    width: 44rem;
+    height: 44rem;
+    background: #f5f230;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.35);
+ position: relative;
+    z-index: 5;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+
+    touch-action: none; /* 🔥 important for mobile touch rotate */
+}
+
+.circle-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.circle-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translateZ(40px); /* depth only */
+}
+
+        .socials { margin-top: 3rem; display: flex; gap: 1.5rem; }
+        .socials a {
+            height: 4.5rem; width: 4.5rem; border-radius: 50%; background: #000;
+            color: #00d4ff; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; transition: 0.3s;
+        }
+/* --- ABOUT SECTION STYLES (PAGE 2) - UPDATED --- */
+.about-page {
+    min-height: 70vh; /* 100vh irunthatha 80vh aakiyachu, so page height kuraiyum */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 2%; /* Top and bottom padding-ai 2rem-ah kuraithu irukkaen */
+    background-color: #f9f9f9;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column; /* Content stack vertically below header */
+    width: 100%;
+    gap: 5rem; /* Space between header and main content */
+}
+/* --- HEADER SPACING --- */
+.about-top-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;    /* 6rem-la irunthu 2rem aagi irukku */
+    margin-bottom: 2rem; /* Spacing below title reduced */
+}
+
+.header-content-wrapper {
+    display: flex;
+    align-items: center; /* Logo matrum Title-ai vertical-ah center pannum */
+    gap: 2rem; /* Logo-vukkum Title-vukkum idaiye ulla gap */
+}
+
+.header-user-logo {
+    width: 70px; /* Reference image-ku etra size */
+    height: 70px;
+    background-color: #1f1a1a; 
+    padding: 1rem;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 2px solid #2b11b5;
+}
+
+.about-main-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: #1f1a1a;
+    margin: 0; /* Extra margins remove panna */
+    line-height: 1;
+}
+
+.about-main-title .highlight {
+    color: #2b11b5;
+}
+
+/* 2. MAIN CONTENT LAYOUT STYLES */
+.about-main-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+/* --- SPLIT IMAGE MAGIC (CSS Updated) --- */
+.split-image-container {
+    position: relative;
+    flex: 1;
+    height: 480px; 
+    display: flex;
+    gap: 15px; 
+    max-width: 420px;
+    margin-bottom: 60px;
+    /* 1. Initially hide the slices */
+    perspective: 1000px; /* For smoother animation */
+}
+
+.image-slice {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    border-radius: 1rem; 
+    
+    /* 2. Initial state BEFORE animation (Piano up position) */
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9); /* Starts up, smaller */
+    transition: opacity 0.5s, transform 0.5s; /* Smooth transitions */
+}
+
+/* 🔥 Animation class to trigger (Piano keys playing) 🔥 */
+.split-image-container.animate .image-slice {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Smoothly back to normal */
+}
+
+/* 3. Staggered delay for the Piano keys effect */
+.split-image-container.animate .slice-1 { transition-delay: 0.1s; }
+.split-image-container.animate .slice-2 { transition-delay: 0.3s; }
+.split-image-container.animate .slice-3 { transition-delay: 0.5s; }
+.image-slice {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    border-radius: 1rem; /* Rounded corners for individual slices */
+}
+
+.image-slice img {
+    position: absolute;
+    height: 130%;
+    width: 300%; 
+    object-fit: cover;
+    top: 0;
+}
+
+/* Image Alignment across slices */
+.slice-1 img { left: 0; }
+.slice-2 img { left: -100%; }
+.slice-3 img { left: -200%; }
+
+/* Vertical Offset */
+.slice-1, .slice-3 { margin-top: 30px; height: calc(100% - 60px); }
+.slice-2 { margin-top: 0px; }
+
+/* Slice 2 Details */
+.detail-box {
+    position: absolute;
+    width: 70%;
+    height: 8px;
+    left: 15%;
+    border-radius: 10px;
+    z-index: 5;
+}
+
+/* --- MAIN CONTENT CARD (HEIGHT REDUCED) --- */
+.about-content-card {
+    flex: 2;
+    background: #1e1a1a;
+    color: white;
+    /* Top and bottom padding 6rem-la irunthu 3.5rem-ah kuraithu irukkaen */
+    padding: 0.2rem 8rem; 
+    border-radius: 3rem;
+    margin-bottom: 40px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.about-content-card h2 { font-size: 4.2rem; font-weight: 800; margin-bottom: 0.5rem; margin-top: 30px; }
+.about-content-card h3 { color: #ff9d00; font-size: 2.6rem; margin-bottom: 3rem; font-weight: 600; }
+.about-content-card p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 2.5rem; /* Paragraph-ku killa ulla gap kuraithu irukkaen */
+}
+/* --- INFO GRID SPACING --- */
+.card-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;       /* 4rem-la irunthu 2rem aakiyachu */
+    margin-bottom: 3rem; /* Spacing before button reduced */
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label { color: #ff9d00; font-weight: 700; font-size: 1.6rem; display: block; margin-bottom: 8px; }
+.info-value { font-size: 1.6rem; color: #fff; opacity: 0.95; }
+
+/* Resume Button Styling with Press Effect from reference */
+.resume-button {
+    background: #2b11b5;
+    color: white;
+    padding: 1.6rem 4rem;
+    border-radius: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.8rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+/* Hover lift and shadow */
+.resume-button:hover {
+    background: #1f0c82;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(43, 17, 181, 0.4);
+}
+
+/* 🔥 CLICK Effect from Reference 🔥 */
+.resume-button:active {
+    transform: scale(0.96) translateY(1px); /* Pressed effect */
+    background-color: #15085e; /* Deeper color */
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.4); /* Inset shadow */
+    transition: 0.1s;
+}
+/* --- PAGE 3: SKILLS SECTION STYLES - UPDATED --- */
+.skills-page {
+    min-height: 100vh; /* Premium compact height like reference */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9rem 9%; /* Top/Bottom padding further reduced */
+    background-color: #ffffff; /* Different light bg for Page 3 */
+}
+
+/* --- SKILLS WRAPPER: WIDTH INCREASED --- */
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 110%; /* Screen-oda orathukku nerungum (Left/Right gap kuraiyum) */
+    gap: 4rem;
+    max-width: 1700px; /* 1400px-ilirunthu 1700px-aaka maattrappattuள்ளது */
+    margin: 0 0;
+}
+
+/* 1. TOP CENTER HEADER ALIGNMENT */
+.skills-top-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-main-title {
+    font-size: 4rem; /* premium compact title size */
+    font-weight: 900;
+    color: #000000;
+    line-height: 1;
+}
+
+.skills-main-title .highlight {
+    color: #2b11b5; /* Purple highlight like Page 2 */
+}
+.skills-content-card {
+    width: 100%;
+    background: #ffffff; 
+    color: rgb(0, 0, 0);
+    
+    /* 🔥 LEFT & RIGHT PADDING INCREASED FOR BREATHING SPACE 🔥 */
+    /* Top/Bottom: 8rem, Left/Right: 12rem */
+    padding: 0.5rem 12rem; 
+    
+    border-radius: 4rem;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; /* Content-ai rendoru orathukkum thallum */
+    gap: 8rem; /* Left content-kum Right preview-kum idaiye nalla gap */
+}
+/* Intro text mela irunthu gap athigamaaka */
+.skill-intro {
+    font-size: 1.7rem;
+    line-height: 1.9;
+    color: #000000;
+    margin-bottom: 4rem; /* Bottom gap increased */
+}
+
+/* 3. SKILLS GRID ALIGNMENT */
+.skills-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for 1st and 2nd row list alignment */
+    gap: 1.8rem; /* Reduced grid gaps */
+    width: 100%;
+}
+
+.skill-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+    position: relative;
+    
+    /* 1. Mukhkiyamaana Matram: Square box color/border remove pannurom */
+    background-color: transparent !important; 
+    border: none !important;
+    padding: 0 !important; /* No internal spacing */
+}
+
+/* --- SQUARE SHAPE ICONS CODE --- */
+
+.icon-circle {
+    width: 70px; 
+    height: 70px;
+    border-radius: 15px; /* Square with slight round edges */
+    overflow: hidden;    /* Image box-ai vittu veliya varaama irukka */
+    padding: 0;          /* Image full-ah box-ai cover panna gap-ai remove pannurom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a242454;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-left: 30px; 
+    margin-top: 40px;  
+    gap:95px;   /* Grid alignment-kaaga */
+}
+
+/* 🔥 CLICK PANNA ACTIVE AAGUM POTHU (Square Pop-out) 🔥 */
+.skill-icon-item.active {
+    z-index: 50; 
+}
+
+.skill-icon-item.active .icon-circle {
+    border-color: #2b11b5; 
+    background-color: #352f2f;
+    /* Zoom & Lift effect */
+    transform: scale(1.3) translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Square kula image fit aaga */
+.skill-img-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px; /* Image edges light-ah round aaga */
+    opacity: 1 !important;
+}
+
+
+/* Staggered delay for list animation on data points (You can adjust this per icon) */
+.skills-icons-grid .skill-icon-item {
+    animation: list-load-accent 0.5s ease-out forwards;
+    opacity: 0;
+}
+@keyframes list-load-accent {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.95; }
+}
+
+/* Staggered load delays for first 4 then next 4 (You can manually add delays like Page 2 animation) */
+.skill-icon-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-icon-item:nth-child(2) { animation-delay: 0.2s; }
+.skill-icon-item:nth-child(3) { animation-delay: 0.3s; }
+.skill-icon-item:nth-child(4) { animation-delay: 0.4s; }
+.skill-icon-item:nth-child(5) { animation-delay: 0.5s; }
+.skill-icon-item:nth-child(6) { animation-delay: 0.6s; }
+.skill-icon-item:nth-child(7) { animation-delay: 0.7s; }
+.skill-icon-item:nth-child(8) { animation-delay: 0.8s; }
+
+/* 🔥 CLICK PANNA ACTIVE AAGUM POTHU (Front-la vara logic) 🔥 */
+.skill-icon-item.active {
+    z-index: 50; /* Layer-ai mela kondu varum */
+}
+.skill-icon-item.active .icon-circle {
+    border-color: #2b11b5; 
+    background-color: #ffffff;
+    /* Zoom (scale 1.3) matrum Lift (translateY -8px) */
+    transform: scale(1.3) translateY(-8px); 
+    /* Deep shadow thaan "Front" feel tharum */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 
+                0 0 15px rgba(43, 17, 181, 0.1); 
+}
+/* Icon image brightness adjustment */
+.skill-icon-item.active .skill-img-placeholder {
+    opacity: 1 !important;
+    transform: scale(1.1);
+}
+/* --- RIGHT SIDE: CLEAN IMAGE & TEXT ROLL (No Panel Box) --- */
+.skill-preview-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; 
+    min-height: 500px; /* Spacing-kaka height maintain seigirom */
+}
+
+.preview-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem; /* Image-kum text-kum ulla gap */
+    opacity: 0;
+    transform: translateY(50px); /* Start position for roll */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth premium transition */
+}
+
+/* Intha class JS moolama add aagum pothu content mela varum */
+.preview-content-wrapper.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.current-skill-img {
+    width: 300px; /* Neenga kaeta antha periya size */
+    height: 300px;
+    object-fit: contain;
+    margin-top: -40px;
+    /* Optional: Slight shadow to make image pop without a box */
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+}
+
+.skill-text-group {
+    text-align: center;
+}
+
+.skill-panel-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #2b11b5; /* Purple highlight color */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skill-panel-desc {
+    font-size: 1.6rem;
+    color: #555; /* Light grey text */
+    max-width: 350px;
+    line-height: 1.6;
+}
+
+.card-left-content {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Align text to left like the image */
+}
+
+.skill-text-header {
+    margin-bottom: 3rem;
+    border-left: 5px solid #2b11b5; /* Adding a decorative line on the left */
+    padding-left: 20px;
+}
+
+.skill-panel-title {
+    font-size: 4rem !important; /* Larger title */
+    margin-bottom: 0.5rem;
+}
+
+.skill-intro {
+    font-size: 1.6rem !important;
+    margin-bottom: 2rem !important;
+    opacity: 0.8;
+}
+
+.skills-icons-grid {
+    grid-template-columns: repeat(4, 70px) !important; /* Fixed size columns */
+}
+.map-edu-section {
+    padding: 20px 10%;
+    background: #fffde2;
+    position: relative;
+}
+/* Academic Journey Title */
+.map-header h2 {
+    font-family: 'Poppins', sans-serif;/* Royal & Professional look */
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ce2020;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    /* Light Glow Effect for Dark Theme */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Map Quote Styling */
+.map-quote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #bbb; /* Dull grey for the quote to look elegant */
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+/* Optional: Adding a small underline for the title */
+.map-header h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffcc00; /* Unga theme yellow color */
+    margin: 10px auto;
+    border-radius: 2px;
+}
+.map-header { text-align: center; margin-bottom: 25px; }
+.map-title { font-size: 3.2rem; color: #1a1a1a; letter-spacing: 2px; margin-bottom: 0; }
+.map-quote { font-size: 1.4rem; color: #666; font-style: italic; }
+
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced vertical gap */
+}
+
+/* Central Road/Line */
+.map-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(to bottom, #ff4500 0, #ff4500 10px, transparent 10px, transparent 20px);
+    z-index: 0;
+}
+
+.map-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Image Left Logic */
+.img-left { flex-direction: row; }
+/* Content Left Logic (2nd item) */
+.content-left { flex-direction: row-reverse; }
+
+.map-visual {
+    flex: 1;
+    height: 280px;
+    position: relative;
+    padding: 10px;
+}
+
+.map-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.loc-pin {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #ff4500;
+    color: white;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 5px 10px rgba(255,69,0,0.3);
+}
+
+.map-content {
+    flex: 1;
+    padding: 0 50px;
+}
+
+.edu-date {
+    color: #ff4500;
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edu-date.highlight {
+    background: rgba(255, 69, 0, 0.1);
+    padding: 2px 10px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.map-content h3 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.map-content p {
+    font-size: 1.4rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Animation */
+.animate-map { opacity: 0; transform: translateY(20px); transition: 0.8s ease; }
+.animate-map.show { opacity: 1; transform: translateY(0); }
+
+
+
+
+/* --- PROJECTS SECTION (DARK MODE) --- */
+.project-stack-section {
+    padding: 100px 5%;
+    background: #121212; /* Different from Education Page */
+    min-height: 100vh;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.project-title {
+    font-size: 4rem;
+    color: #ff4500; /* Royal Orange contrast */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.project-stack-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px; /* Space for sticky stacking */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- PROJECTS SECTION FIX --- */
+.project-card {
+    position: sticky;
+    top: 100px;
+    width: 100%;
+    height: 500px;
+    border-radius: 35px;
+    overflow: hidden;
+    background: #1e1e1e;
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Overlay focus fix */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 40px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: auto; /* Buttons-ku mattum work aagum */
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* --- BENTO GRID ITEM STYLING --- */
+.item {
+    break-inside: avoid;
+    margin-bottom: 25px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.item:hover {
+    transform: translateY(-8px);
+    border-color: #ff4500;
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2);
+}
+
+.item img, .item video {
+    width: 100%;
+    display: block;
+    height: auto;
+    filter: grayscale(20%);
+    transition: 0.4s;
+}
+
+.item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Thumbnail full-ah cover aagum */
+    display: block;
+    background: #000; /* Image load aaga neram aana black-ah theriyum */
+}
+
+.item:hover img, .item:hover video {
+    filter: grayscale(0%);
+}
+/* --- ITEM INFO (Title + Button) --- */
+.item-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+    background: #1a1a1a;
+}
+
+.item-info p {
+    font-size: 15px;
+    color: #fff;
+    margin: 0;
+}
+
+.view-btn {
+    padding: 6px 15px;
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #fff;
+    color: #ff4500;
+    transform: scale(1.1);
+}
+
+/* --- FULL VIEWER (The Pop-up) --- */
+.full-viewer {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#fullViewerTitle {
+    color: #ff4500;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#viewerContent {
+    max-width: 90%;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image/Video Dynamic Shape Fix */
+.viewer-media {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px; /* Light curve for premium look */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    object-fit: contain; /* Idhu dhaan shape-ah preserve pannum */
+    animation: zoomIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-viewer {
+    position: absolute;
+    top: 30px; right: 40px;
+    font-size: 50px; color: #fff;
+    cursor: pointer;
+}
+
+/* Dynamic Media Classes */
+.insta-vertical {
+    height: 90%;
+    width: auto;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #333;
+    box-shadow: 0 0 50px rgba(255, 69, 0, 0.2);
+}
+
+.insta-horizontal {
+    width: 85%;
+    max-width: 1100px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Close Button Styling */
+.close-viewer {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 60px;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.close-viewer:hover {
+    color: #ff4500;
+    transform: rotate(90deg);
+}
+
+/* --- SCROLLBAR FOR MODAL --- */
+.modal::-webkit-scrollbar {
+    width: 8px;
+}
+.modal::-webkit-scrollbar-track {
+    background: #121212;
+}
+.modal::-webkit-scrollbar-thumb {
+    background: #ff4500;
+    border-radius: 10px;
+}
+
+.view-btn {
+    padding: 15px 25px;
+    background: #e05d2e;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+} 
+
+
+
+.card-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+
+
+/* Hover-Rise-Up Text */
+.content-rise {
+    text-align: center;
+    transform: translateY(50px); /* Text starts below */
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .content-rise {
+    transform: translateY(0); /* Text rises up */
+}
+
+.project-card:hover .card-bg-img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.content-rise h3 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.content-rise p {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* Eye Icon Button */
+.view-eye-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ff4500;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.view-eye-btn:hover {
+    background: white;
+    color: #ff4500;
+    transform: scale(1.1);
+}
+
+
+
+@keyframes zoomIn {
+    from { transform: translateY(-50%) scale(0.7); opacity: 0; }
+    to { transform: translateY(-50%) scale(1); opacity: 1; }
+}
+/* Gallery Set - Intha class thaan main */
+.gallery-set {
+    display: none; /* Modal open aagum pothu JS moolama ithu 'block' aagum */
+    column-count: 3; /* Bento style (3 columns) */
+    column-gap: 40px;
+    padding: 40px;
+}
+
+/* Modal Open-la irukura 'active' gallery-ku mattum display */
+.gallery-set.active-gallery {
+    display: block !important;
+}
+
+.gallery-grid {
+    display: block !important; /* Grid-ah block-ah mathuna thaan Masonry work aagum */
+    column-count: 3;           /* 3 Columns fixed */
+    column-gap: 20px;          /* Column-ku naduvula gap */
+    padding: 20px;
+}
+
+#modalTitle {
+    text-align: center;
+    font-size: 2.2rem; /* Font size increase pannியாச்சு */
+    font-weight: 700;
+    color: #fff;
+    
+    /* Background color and Styling */
+    background: linear-gradient(90deg, #ff0055, #ff5e00); /* Nalla bright gradient color */
+    display: inline-block; /* Text evvalavo avalo thaan bg varum */
+    padding: 10px 30px;
+    border-radius: 50px; /* Capsule shape */
+    
+    /* Center-la vaikurathuku */
+    margin: 0 auto 30px auto; 
+    display: table; /* Block element-ah center panna ithu helpful */
+    
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 15px rgba(255, 0, 85, 0.4);
+}
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover { color: #ff4500; }
+
+#modalMediaContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalMediaContainer img, 
+#modalMediaContainer video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Aspect ratio maaraama original size-la kaatum */
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+/* --- BLINK-FREE MODAL STYLING --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    overflow-y: auto; /* Scroll fix */
+}
+
+.modal-content {
+    position: relative;
+    margin: 40px auto; /* Removed translateY to stop blinking */
+    width: 95%; /* 5 columns vara konjam extra width */
+    max-width: 1300px;
+    background: transparent;
+    animation: fadeInScale 0.3s ease-out;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+
+.frame-box:hover {
+    transform: translateY(-5px);
+}
+
+
+.gallery-wrapper {
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto; /* Grid perusa poga poga scroll aagum */
+    padding: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #ff4500 transparent;
+}
+
+#fullViewer {
+    display: none;
+    position: fixed;
+    z-index: 20000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+}
+
+#viewerContent img,
+#viewerContent video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.neon-glass-section {
+    padding: 100px 5%;
+    background: #aeae93; /* Deep dark background */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #805315;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    margin-bottom: 10px;
+}
+
+.gold-divider {
+    width: 80px;
+    height: 5px;
+    border-radius:40px ;
+    background: #6f4e1f;
+    margin: 0 auto 60px;
+    box-shadow: 0 0 15px rgba(194, 163, 120, 0.6);
+}
+
+/* Slider Layout */
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 40px 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cards-wrapper::-webkit-scrollbar { display: none; }
+
+/* Neon Glass Card */
+.glass-card {
+    flex: 0 0 420px;
+    background: #080808;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(194, 163, 120, 0.1);
+    padding: 50px 40px;
+    border-radius: 25px;
+    text-align: left;
+    transition: 0.5s ease;
+}
+
+.glass-card:hover {
+    border-color: #C2A378;
+    background:#080808;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(194, 163, 120, 0.1);
+}
+
+.glow-stars {
+    color: #C2A378;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(194, 163, 120, 0.5);
+}
+
+.feedback-quote {
+    color: #ffffff;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 40px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.initial-box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #C2A378;
+    color: #C2A378;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    background: rgba(194, 163, 120, 0.05);
+}
+
+.meta h4 { color: #ff0707; margin: 0; font-size: 1.6rem; }
+.meta span { color: #edc7c7; font-size: 1.1rem; }
+
+/* Arrows */
+.nav-arrow {
+    background: rgba(172, 135, 82, 0);
+    color: #6b5710;
+    border: 4px solid #6c5511;
+    width: 70px; height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.nav-arrow:hover { background: #adb013; color: #000; }
+.left { margin-right: 25px; }
+.right { margin-left: 25px; }
+
+
+
+
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ececec; /* Outer yellow background */
+    padding: 20px;
+}
+
+.contact-card {
+    background: #525227;
+    width: 100%;
+    max-width: 1100px;
+    height: 560px;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* Side Navigation Container */
+.side-nav {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 999; /* Ithuvum romba mukkiyam */
+}
+
+/* Icon Styling */
+.nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: transparent !important; /* Background remove panniyachu */
+    transition: all 0.3s ease;
+}
+
+.nav-icon i {
+    font-size: 30px; /* Logo size */
+    color: rgba(255, 255, 255, 0.7) !important; /* Light white color */
+}
+
+/* Hover effect */
+.nav-icon:hover i {
+    color: #ffcc00 !important; /* Mouse vecha yellow color */
+    transform: scale(1.2);
+}
+
+/* LinkedIn icon-ai highlight panna */
+.active-icon i {
+    color: #ffcc00 !important;
+}
+
+/* Conflict aagura intha old class-ai remove pannidunga or comment pannunga */
+/* .nav-icon { ... old background: #333 logic ... } */
+/* Content Layout */
+.contact-content {
+    display: flex;
+    width: 100%;
+    padding: 60px 80px;
+}
+
+.contact-form-side { flex: 1; color: white; }
+.contact-form-side h2 { font-size: 3.5rem; margin-bottom: 10px; }
+.yellow-text { color: #ffcc00; }
+.contact-form-side p { font-size: 1.2rem; color: #aaa; margin-bottom: 30px; max-width: 350px; }
+
+/* Form Inputs */
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; font-size: 1.1rem; margin-bottom: 5px; color: #eee; }
+.input-group input, .input-group textarea {
+    width: 80%;
+    background: #2a2a2a;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.3rem;
+}
+.input-group textarea { height: 80px; resize: none; }
+
+.send-btn {
+    background: #ffcc00;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.2s ease; /* Smooth transition */
+    box-shadow: 0 4px 0px #b8860b; /* Bottom shadow for 3D look */
+    position: relative;
+    outline: none;
+}
+
+/* Hover panna light-ah mela thookkum */
+.send-btn:hover {
+    background: #ffd700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0px #b8860b;
+}
+
+/* CLICK/PRESS PANNUM POTHU (The Effect) */
+.send-btn:active {
+    transform: translateY(4px); /* Button ulla amungum */
+    box-shadow: 0 0px 0px #b8860b; /* Shadow maraiyum */
+    background: #e6b800;
+}
+
+/* --- OPTIMIZED IMAGE FITTING --- */
+.contact-image-side {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Image horizontally center-la align range range */
+    align-items: flex-end; /* Image bottom-la rest aaganum range range */
+    overflow: visible; /* To allow the wave to peek out slightly */
+}
+.yellow-wave {
+    position: absolute;
+    width: 480px; /* Precise scale optimizations high-quality profile integration accurate-ah support pannanum */
+    height: 480px;
+    background: #ffffff; /* Consistency across premium dark theme maintain pannanum */
+    
+    /* IRREGULAR SHAPE FORMULA - Using standard blob theory for precise abstract control */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
+    
+    /* Position adjustments dynamic peek logic correct-ah set pannanum */
+    bottom: -30px;
+    top:0px;
+    right: -30px;
+    z-index: 1; /* Structure integrity complete background priority maintain pannanum */
+    
+    /* Optional: Small rotation dynamic feeling accurate-ah enhance pannanum */
+    transform: rotate(15deg); 
+}
+
+/* Positioning the Cut-out Image */
+.profile-img {
+    height: 500px; /* Original design proportional fitting range */
+    position: relative;
+    z-index: 2; /* Always in front of the wave */
+    margin-right: 10px;
+    margin-bottom: -60px;
+    /* Strong drop-shadow to make the person "pop" out from the dark card range */
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)); 
+   
+    /* Optional: Small animation for entrance range */
+    animation: slideInFromRight 1s ease;
+}
+/* Basic slide animation */
+@keyframes slideInFromRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+/* --- CONTACT HEADER STYLING --- */
+.contact-section {
+    flex-direction: column; /* Title mela, Card kela vara ithu mukkiyam */
+    gap: 40px; /* Title-kum Card-kum naduvula gap */
+    padding: 60px 20px;
+}
+
+.contact-header {
+    text-align: center;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 4rem; /* Nalla periya title */
+    font-weight: 800;
+    color: #1a1a1a; /* Unga outer background gray-nra thala dark color suit aagum */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+/* Yellow span for 'Me' */
+.main-title .yellow-text {
+    color: #ffcc00;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+.main-footer {
+    background: #121212; /* Dark background to match Contact page */
+    color: #fff;
+    padding: 25px 10% 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Ithu thaan right end-ku logo-vai thallum */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Left side alignment */
+.text-side {
+    max-width: 400px;
+}
+
+/* Logo Container Styling */
+.logo-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Everything to the right end */
+    margin-right: 70px;
+}
+
+.footer-logo-container {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo-img {
+    width: 350px; /* Logo size-ai inga adjust pannikalam */
+    height: 350px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Hover effect for logo */
+.footer-logo-container:hover {
+    transform: scale(1.05); /* Light-ah zoom aagum */
+}
+
+.logo-side p {
+    font-size: 1.0rem;
+    color: #888;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+
+.footer-box {
+    flex: 1;
+   margin:0;
+   
+}
+
+.footer-box h3 {
+    color: #ffcc00; /* Yoga's Portfolio in Yellow */
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.footer-box h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    border-left: 3px solid #ffcc00;
+    padding-left: 10px;
+}
+
+.footer-box p {
+    color: #bbb;
+    line-height: 1.4;
+    font-size: 1.5rem;
+}
+
+.motto {
+    margin-top: 15px;
+    font-style: italic;
+    color: #ffcc00 !important;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ddd;
+    font-size: 1.4rem;
+}
+
+.contact-list i {
+    color: #ffcc00;
+    font-size: 2rem;
+}
+
+.footer-bottom {
+    width: 100%; /* Full width eduthutta side-la pogaathu */
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Subtle line */
+    margin-top: auto; /* Push to the very bottom */
+}
+.footer-bottom p {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0;
+}
+ </style>
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">
+        <img src="images/gio.png" alt="Logo"> <span>Yoga</span>
+    </a>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="home" id="home">
+        <div id="particles-js"></div>
+        <div class="content">
+            <h2>Hi There 👋👋,</h2>
+            <h2>I'm <span class="name">Yohendra Prakash</span></h2>
+            <h2 class="outlined">Artist</h2>
+            <p>I'm A <span class="typing-text"></span></p>
+            <a href="#about" class="btn">About Me <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+        <div class="image">
+           <div class="yellow-circle-wrap">
+    <div class="yellow-circle tilt">
+    <div class="circle-inner">
+        <img src="images/toon.jpeg" alt="Avatar">
+    </div>
+</div>
+           </div>
+        </div>
+    </section>
+<section class="about-page" id="about">
+    <div class="about-wrapper">
+        
+<div class="about-top-header">
+    <div class="header-content-wrapper">
+        <img src="images/image.png" alt="User Icon" class="header-user-logo">
+        <h1 class="about-main-title">About <span class="highlight">Me</span></h1>
+    </div>
+</div>
+        
+        <div class="about-main-content">
+            <div class="split-image-container">
+                <div class="image-slice slice-1">
+                    <img src="images/aboutme.jpeg" alt="Profile">
+                </div>
+                <div class="image-slice slice-2">
+                    <img src="images/aboutme.jpeg" alt="Profile">
+                    <div class="detail-box top-purple"></div>
+                    <div class="detail-box bottom-grey"></div>
+                </div>
+                <div class="image-slice slice-3">
+                    <img src="images/aboutme.jpeg" alt="Profile">
+                </div>
+            </div>
+
+            <div class="about-content-card">
+                <h2>I'm Yohendra Prakash</h2>
+                <h3>Artist</h3>
+                <p>
+                    As a creative visualist, graphic designer and 3D animator, I transform raw ideas into visually captivating experiences—infusing energy, precision and creativity to keep audiences engaged and inspired.
+                </p>
+                
+                <div class="card-info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Insta ID:</span>
+                        <span class="info-value">its.gio_creations</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value">yohendran28@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Phone:</span>
+                        <span class="info-value">+91 9500638587</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Place:</span>
+                        <span class="info-value">Thuraiyur, India - 621010</span>
+                    </div>
+                </div>
+                
+                <a href="resume.pdf" target="_blank" class="resume-button">Resume <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="skills-page" id="skills">
+    <div class="skills-wrapper">
+        
+        <div class="skills-top-header">
+            <h1 class="skills-main-title">Skills & <span class="highlight">Abilities</span></h1>
+        </div>
+        
+        <div class="skills-content-card">
+            
+            <div class="card-left-content">
+                
+                <div class="skill-text-header">
+                    <h2 id="dynamic-main-title" class="skill-panel-title">Blender</h2>
+                    <p id="dynamic-one-liner" class="skill-intro">Creating 3D models, animations, and renders using Blender.</p>
+                </div>
+
+                <div class="skills-grid-wrapper">
+                    <div class="skills-icons-grid">
+                        <div class="skill-icon-item active" data-skill="blender">
+                            <div class="icon-circle"><img src="images/blender.png" class="skill-img-placeholder"></div>
+                        </div>
+                        <div class="skill-icon-item" data-skill="photoshop">
+                            <div class="icon-circle"><img src="images/Ps.png" class="skill-img-placeholder"></div>
+                        </div>
+                        <div class="skill-icon-item" data-skill="ae">
+                            <div class="icon-circle"><img src="images/Ae.png" class="skill-img-placeholder"></div>
+                        </div>
+                        <div class="skill-icon-item" data-skill="maya">
+                            <div class="icon-circle"><img src="images/maya.png" class="skill-img-placeholder"></div>
+                        </div>
+                         <div class="skill-icon-item" data-skill="An">
+                            <div class="icon-circle"><img src="images/an.png" class="skill-img-placeholder"></div>
+                        </div>
+                        <div class="skill-icon-item" data-skill="substance">
+                            <div class="icon-circle"><img src="images/Pt.jpg" class="skill-img-placeholder"></div>
+                        </div>
+                        <div class="skill-icon-item" data-skill="premier">
+                            <div class="icon-circle"><img src="images/pr.png" class="skill-img-placeholder"></div>
+                        </div>
+                        <div class="skill-icon-item" data-skill="Ai">
+                            <div class="icon-circle"><img src="images/Ai.png" class="skill-img-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-preview-panel">
+                <div class="preview-content-wrapper active" id="skill-display-area">
+                    <img src="images/blender.png" alt="Skill Image" class="current-skill-img" id="main-skill-img">
+                    <p id="dynamic-desc" class="skill-panel-desc">Creating 3D models, animations, and renders using Blender.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="education" class="map-edu-section">
+    <div class="map-header">
+        <h2 class="map-title">Academic Journey</h2>
+        <p class="map-quote">"Education is not the learning of facts, but the training of the mind to think."</p>
+    </div>
+
+    <div class="map-container">
+        <div class="map-line"></div>
+
+        <div class="map-item img-left animate-map">
+            <div class="map-visual">
+                <img src="images/imagecreative.png" alt="Creative Education">
+                <div class="loc-pin"><i class='bx bxs-map'></i> Trichy</div>
+            </div>
+            <div class="map-content">
+                <span class="edu-date">2026 | Completed</span>
+                <h3>Image Creative Education</h3>
+                <p>Graphical and 3D Animation</p>
+            </div>
+        </div>
+
+        <div class="map-item content-left animate-map">
+            <div class="map-visual">
+                <img src="images/kncet.jpg" alt="College">
+                <div class="loc-pin"><i class='bx bxs-map'></i> Thottiyam</div>
+            </div>
+            <div class="map-content">
+                <span class="edu-date highlight">2022-2026 | Completed</span>
+                <h3>Kongunadu College of Engineering</h3>
+                <p>Electronics and Communication Engineering</p>
+            </div>
+        </div>
+
+        <div class="map-item img-left animate-map">
+            <div class="map-visual">
+                <img src="images/sowdika.jpg" alt="School">
+                <div class="loc-pin"><i class='bx bxs-map'></i> Thuraiyur</div>
+            </div>
+            <div class="map-content">
+                <span class="edu-date">2009-2022 | Completed</span>
+                <h3>Sowdambikaa Matric School</h3>
+                <p>Computer Science Department</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="work" class="project-stack-section">
+
+    <div class="project-header">
+        <h2 class="project-title">My Projects</h2>
+    </div>
+
+    <div class="project-stack-container">
+        <div class="project-card">
+            <img src="images/Graphicaldesign.png" class="card-bg-img">
+            <div class="project-overlay">
+                <div class="content-rise">
+                    <h3>Graphic Design</h3>
+                    <p>Creative posters & social media designs</p>
+                    <a href="#" class="view-eye-btn" data-target="graphicGallery">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/VideoEditing.png" class="card-bg-img">
+            <div class="project-overlay">
+                <div class="content-rise">
+                    <h3>Video Editing</h3>
+                    <p>Cinematic edits & reels</p>
+                    <a href="#" class="view-eye-btn" data-target="videoGallery">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Modeling.png" class="card-bg-img">
+            <div class="project-overlay">
+                <div class="content-rise">
+                    <h3>3D Models</h3>
+                    <p>3D modeling & rendering</p>
+                    <a href="#" class="view-eye-btn" data-target="modelGallery">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/logoima.png" class="card-bg-img">
+            <div class="project-overlay">
+                <div class="content-rise">
+                    <h3>Logo Design</h3>
+                    <p>Brand identity</p>
+                    <a href="#" class="view-eye-btn" data-target="logoGallery">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal" class="modal">
+        <span class="close-modal">&times;</span>
+
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+
+            <div id="graphicGallery" class="gallery-set">
+                <div class="item">
+                    <img src="images/graphic/pattern.png">
+                    <div class="item-info">
+                        <p>Hackathon Poster</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/graphic/pro.png">
+                    <div class="item-info">
+                        <p>Animated Spiderman Pro</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/graphic/5star.jpg">
+                    <div class="item-info">
+                        <p>5-Star</p>
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <div class="item"><img src="images/graphic/ben.jpg"><div class="item-info"><p>Ben-Watch</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/deadpool.jpg"><div class="item-info"><p>Deadpool</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/xmen.jpg"><div class="item-info"><p>X-Men</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/jaddu.jpg"><div class="item-info"><p>Jaddu</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/kamaraj.png"><div class="item-info"><p>Wishes on his birthday </p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/lik.png"><div class="item-info"><p>Lik edit</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/nike.png"><div class="item-info"><p>Nike shoe</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/stan.jpg"><div class="item-info"><p>Stan-Lee</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/swathi.png"><div class="item-info"><p>Construction Hiring</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/vcty.png"><div class="item-info"><p>Vice city</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/wolf2d.png"><div class="item-info"><p>Wolf Wallpaper</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/hackathon.png"><div class="item-info"><p>Hackathon Poster</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/zebronic.png"><div class="item-info"><p>Zebronic Headphone</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/graphic/zebronics.png"><div class="item-info"><p>Zebronics headphone</p><button class="view-btn">View</button></div></div>
+            </div>
+
+            <div id="videoGallery" class="gallery-set">
+                <div class="item">
+                    <video src="images/videoedit/AdiOdi.mp4" poster="images/spider.jpg"></video>
+                    <div class="item-info"><p>Spiderman Animation</p><button class="view-btn">Play</button></div>
+                </div>
+                
+                <div class="item">
+                    <video src="images/videoedit/Aniruth.mp4"poster="images/aniruth.jpeg"></video>
+                    <div class="item-info"><p>Aniruth Tribute</p><button class="view-btn">Play</button></div>
+                </div>
+                <div class="item">
+                    <video src="images/videoedit/FelxUpdate.mp4" poster="images/flex.png"></video>
+                    <div class="item-info"><p>Flex Update</p><button class="view-btn">Play</button></div>
+                </div>
+                                                <div class="item">
+                    <video src="images/Motion/5Star.mp4" poster="images/Graphic/5star.jpg"></video>
+                    <div class="item-info"><p>5-Star Motion</p><button class="view-btn">Play</button></div>
+                </div>
+                <div class="item">
+                    <video src="images/videoedit/Maaveeran.mp4" poster="images/maava.jpeg"></video>
+                    <div class="item-info"><p>Maaveeran</p><button class="view-btn">Play</button></div>
+                </div>
+
+                            
+                    <div class="item">
+                    <video src="images/videoedit/Deadpool.mp4" poster="images/deadpool.jpeg"></video>
+                    <div class="item-info"><p>Deadpool And Wolverine</p><button class="view-btn">Play</button></div>
+                </div>
+                                 <div class="item">
+                    <video src="images/videoedit/AV5.mp4" poster="images/AV.png"></video>
+                    <div class="item-info"><p>client video</p><button class="view-btn">Play</button></div>
+                </div>
+                <div class="item">
+                    <video src="images/videoedit/Master.mp4" poster="images/master.jpeg"></video>
+                    <div class="item-info"><p>Master</p><button class="view-btn">Play</button></div>
+                </div>
+                <div class="item">
+                    <video src="images/videoedit/Trio.mp4" poster="images/trio.jpg"></video>
+                    <div class="item-info"><p>Trio</p><button class="view-btn">Play</button></div>
+                </div>
+            </div>
+
+
+            <div id="modelGallery" class="gallery-set">
+                <div class="item"><img src="images/3D/Mottu.png"><div class="item-info"><p>Mottu</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/3D/pencil.jpg"><div class="item-info"><p>Pencil</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/3D/car1.png"><div class="item-info"><p>Car 1</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/3D/car2.png"><div class="item-info"><p>Car 2</p><button class="view-btn">View</button></div></div>
+                               <div class="item">
+        <video src="images/3D/BeachHouse.mp4" autoplay muted loop playsinline ></video>
+        <div class="item-info">
+            <p>Beach House</p>
+            <button class="view-btn">Play</button>
+        </div>
+    </div>
+                <div class="item"><img src="images/3D/phone.png"><div class="item-info"><p>Phone</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/3D/Shoe.png"><div class="item-info"><p>Shoe</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/3D/Red.png"><div class="item-info"><p>Red</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/3D/watch.png"><div class="item-info"><p>Watch</p><button class="view-btn">View</button></div></div>
+                 <div class="item"><img src="images/3D/house.jpg"><div class="item-info"><p>Pencil</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/3D/radio.jpg"><div class="item-info"><p>Radio</p><button class="view-btn">View</button></div></div>
+                 <div class="item"><img src="images/3D/Dabba.jpg"><div class="item-info"><p>Dabba</p><button class="view-btn">View</button></div></div>
+
+            </div>
+
+            <div id="logoGallery" class="gallery-set">
+                <div class="item"><img src="images/logo/biscuit.png"><div class="item-info"><p>Biscuit vita logo</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/logo/dd.png"><div class="item-info"><p>DD construction logo</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/logo/Durozen.png"><div class="item-info"><p>Durozen logo</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/logo/Gio.jpg"><div class="item-info"><p>My logo</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/logo/grain.png"><div class="item-info"><p>Grain logo</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/logo/NAT.png"><div class="item-info"><p>NTA logo</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/logo/swathisriya.png"><div class="item-info"><p>Swathisriya logo</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/logo/swc.jpg"><div class="item-info"><p>SWC logo</p><button class="view-btn">View</button></div></div>
+                <div class="item"><img src="images/logo/vk.png"><div class="item-info"><p>VK logo</p><button class="view-btn">View</button></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullViewer" class="full-viewer">
+        <span class="close-viewer">&times;</span>
+        <h3 id="fullViewerTitle">Project Name</h3>
+        <div id="viewerContent">
+            </div>
+    </div>
+
+</section>
+
+
+<section id="testimonials" class="neon-glass-section">
+    <div class="testimonial-header">
+        <h2 class="section-title">Testimonial</h2>
+        <div class="gold-divider"></div>
+    </div>
+
+    <div class="slider-container">
+        <button class="nav-arrow left" onclick="moveSlider(-1)">&#10094;</button>
+
+        <div class="cards-wrapper" id="glassSlider">
+            <div class="glass-card">
+                <div class="glow-stars">★★★★★</div>
+                <p class="feedback-quote">"Yohendra Prakash provided exceptional creative direction for our brand's identity. The logo and poster designs he delivered for Swathisriya Construction perfectly capture our professional essence. His ability to blend modern aesthetics with our vision was truly impressive."</p>
+                <div class="client-info">
+                    <span class="initial-box">RS</span>
+                    <div class="meta">
+                        <h4>Mr. G. Rubana Sundar B.E</h4>
+                        <span>Managing Director of Swathisriya Construction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div class="glow-stars">★★★★★</div>
+                <p class="feedback-quote">"The video editing work done by Yohendra Prakash for Apx Velocity was outstanding. He has a keen eye for detail and pacing, making our content look high-end and engaging. His technical skills in post-production significantly elevated our brand's visual storytelling."</p>
+                <div class="client-info">
+                    <span class="initial-box">AV</span>
+                    <div class="meta">
+                        <h4>Mr. V. Aswin</h4>
+                        <span>Founder & CEO of APX Velocity</span>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="glass-card">
+                <div class="glow-stars">★★★★★</div>
+                <p class="feedback-quote">"We approached Yohendra for a logo redesign for Durozen, and the results exceeded our expectations. He created a minimalist yet powerful brand mark that resonates with our company values. His design process is thorough, professional, and highly creative."</p>
+                <div class="client-info">
+                    <span class="initial-box">PP</span>
+                    <div class="meta">
+                        <h4>Mr. Prathap. P</h4>
+                        <span>Founder & CEO of Durozen</span>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+
+        <button class="nav-arrow right" onclick="moveSlider(1)">&#10095;</button>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="contact-header">
+        <h1 class="main-title">Contact <span class="yellow-text">Me</span></h1>
+    </div>
+    <div class="contact-card">
+<div class="side-nav">
+    <a href="https://wa.me/9500638587" target="_blank" class="nav-icon no-bg">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/yohendra-prakash-g-9293782bb?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="nav-icon no-bg active-icon">
+        <i class='bx bxl-linkedin'></i>
+    </a>
+
+    <a href="https://www.instagram.com/its_gio.creations?igsh=ZXVqN2RybHF2M3dh" target="_blank" class="nav-icon no-bg">
+        <i class='bx bxl-instagram'></i>
+    </a>
+</div>
+
+        <div class="contact-content">
+            <div class="contact-form-side">
+                <h2>Let's <span class="yellow-text">talk</span></h2>
+                <p>To request a quote or want to meet up for coffee, contact me directly or fill out the form and I will get back to you soon.</p>
+                
+<form action="mailto:yohendran@gmail.com" method="post" enctype="text/plain">
+    <div class="input-group">
+        <label>Your Name</label>
+        <input type="text" name="Name" placeholder="Enter your name" required>
+    </div>
+    <div class="input-group">
+        <label>Your Email</label>
+        <input type="email" name="Email" placeholder="Enter your email" required>
+    </div>
+    <div class="input-group">
+        <label>Your Message</label>
+        <textarea name="Message" placeholder="Type your message here..." required></textarea>
+    </div>
+    <button type="submit" class="send-btn">SEND MESSAGE</button>
+</form>
+            </div>
+
+            <div class="contact-image-side">
+                <div class="yellow-wave"></div>
+                <img src="images/contactme.png" alt="prakash" class="profile-img">
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-box text-side">
+            <h3 class="footer-logo-text">Yoga<span>.</span></h3>
+            <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+            <p class="motto">Keep Rising 🚀. Connect with me over live chat!</p>
+        </div>
+
+        <div class="footer-box contact-side">
+            <h4>Contact Info</h4>
+            <ul class="contact-list">
+                <li><i class='bx bxs-phone'></i> +91 9500638587</li>
+                <li><i class='bx bxs-envelope'></i> yohendran28@gmail.com</li>
+                <li><i class='bx bxs-map'></i> Thuraiyur, India-621010</li>
+            </ul>
+        </div>
+
+<div class="footer-box logo-side">
+    <div class="footer-logo-container">
+        <img src="images/gioendt.png" alt="Yoga Logo" class="footer-logo-img">
+    </div>
+    <p>Crafting Digital Experiences</p>
+</div>
+
+    <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Yoga | All Rights Reserved</p>
+    </div>
+</footer>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+ <script>
+    
+// ===============================
+// HERO SECTION EFFECTS
+// ===============================
+
+// Yellow circle re-animate
+const homeSection = document.querySelector("#home");
+const yellowWrap = document.querySelector(".yellow-circle-wrap");
+
+const homeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      yellowWrap.classList.remove("animate");
+      void yellowWrap.offsetWidth;
+      yellowWrap.classList.add("animate");
+    }
+  });
+}, { threshold: 0.6 });
+
+homeObserver.observe(homeSection);
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 120,
+      "density": { "enable": true, "value_area": 900 }
+    },
+    "color": { "value": "#808080" },   // standard grey // light water blue
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.6,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "opacity_min": 0.2,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 6,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 4,
+        "size_min": 2,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false   // ❌ remove lines (not realistic for water)
+    },
+   "move": {
+  "enable": true,
+  "speed": 0.9,              // 🔻 speed reduce (before 10 → now 3)
+  "direction": "bottom",
+  "random": true,
+  "straight": false,
+  "out_mode": "bounce",
+  "bounce": true,
+  "gravity": {
+    "enable": true,
+    "acceleration": 0.6   // 🔻 softer gravity (before 1.5 → now 0.6)
+  }
+}
+  },
+
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"   // splash expand feel
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      }
+    },
+    "modes": {
+      "bubble": {
+        "distance": 120,
+        "size": 10,
+        "duration": 0.3,
+        "opacity": 0.8
+      },
+      "push": {
+        "particles_nb": 15
+      }
+    }
+  },
+
+  "retina_detect": true
+});
+// Typing
+new Typed(".typing-text", {
+  strings: ["3D Animator", "Graphic Designer", "Video Editor"],
+  typeSpeed: 60,
+  backSpeed: 30,
+  loop: true
+});
+
+// Tilt
+VanillaTilt.init(document.querySelector(".yellow-circle"), {
+  max: 25,
+  speed: 800,
+  scale: 1,
+  perspective: 1000
+});
+
+// ===============================
+// NAV ACTIVE (Home Default + Scroll)
+// ===============================
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("header .navbar ul li a");
+
+// --- Default Home Active on Page Load ---
+// Webpage load aagum pothu "Home" active-ah irukanum
+window.addEventListener("DOMContentLoaded", () => {
+    navLinks.forEach(link => {
+        if(link.getAttribute("href") === "#home") {
+            link.classList.add("nav-active");
+        } else {
+            link.classList.remove("nav-active");
+        }
+    });
+});
+
+// --- Scroll Logic ---
+window.addEventListener("scroll", () => {
+    let current = "";
+    
+    // Page top-la irukkum pothu current-ai "home" nu fix pannurom
+    if (window.pageYOffset < 100) {
+        current = "home";
+    } else {
+        sections.forEach(section => {
+            const top = section.offsetTop - 150;
+            if (window.pageYOffset >= top && window.pageYOffset < top + section.offsetHeight) {
+                current = section.id;
+            }
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.classList.toggle("nav-active", link.getAttribute("href") === `#${current}`);
+    });
+});
+// ==========================================
+// PIANO KEY ANIMATION TRIGGER
+// ==========================================
+
+// 1. Select the elements
+const splitImageContainer = document.querySelector('.split-image-container');
+const aboutSection = document.querySelector('#about'); // section by ID
+
+// 2. Options for the Observer (50% visibility trigger)
+const observerOptions = {
+    threshold: 0.1// Section 50% screen-la theriyama trigger aagum
+};
+
+// 3. Callback function when intersection happens
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Section is visible, trigger animation
+            splitImageContainer.classList.add('animate');
+            // stop observing once animated to avoid repeated animations
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+// 4. Create the observer
+const aboutObserver = new IntersectionObserver(observerCallback, observerOptions);
+
+// 5. Start observing the about section
+aboutObserver.observe(aboutSection);
+
+//skill page 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const skillIcons = document.querySelectorAll('.skill-icon-item');
+    const skillCard = document.querySelector('.skills-content-card');
+    
+    // 1. NEENGA KETTA EXACT ORDER (1 to 8)
+    const skillData = {
+        'blender': { title: 'Blender', line: 'Creating 3D models, animations, and renders using Blender.', desc: '3D Modeling', img: 'images/blender.png', bgColor: 'rgba(255, 69, 0, 0.45)' }, // 1
+        'photoshop': { title: 'Adobe Photoshop', line: 'Creating and enhancing visuals through photo editing and design using Adobe Photoshop.', desc: 'Image Editing', img: 'images/Ps.png', bgColor: 'rgba(0, 153, 255, 0.2)' }, // 2
+        'ae': { title: 'Adobe After Effects', line: 'Designing motion graphics and visual effects using Adobe After Effects.', desc: 'Motion Graphics', img: 'images/Ae.png', bgColor: 'rgba(200, 0, 255, 0.2)' }, // 3
+        'maya': { title: 'Maya', line: 'Building and animating 3D models with basic lighting and rendering in Autodesk Maya.', desc: '3D Modeling', img: 'images/maya.png', bgColor: 'rgba(0, 175, 255, 0.2)' }, // 4
+        'An': { title: 'Adobe Animate', line: 'Creating simple 2D animations and interactive content using Adobe Animate.', desc: '2D Animation', img: 'images/an.png', bgColor: 'rgba(255, 77, 77, 0.2)' }, // 5
+        'substance': { title: 'Adobe Substance 3D Painter', line: 'Adding realistic textures and materials to 3D assets using Adobe Substance 3D Painter.', desc: 'Texture Painting', img: 'images/Pt.jpg', bgColor: 'rgba(168, 230, 25, 0.2)' }, // 6
+        'premier': { title: 'Adobe Premiere Pro', line: 'Editing videos with smooth cuts, transitions, and clean storytelling using Adobe Premiere Pro.', desc: 'Video Editing', img: 'images/pr.png', bgColor: 'rgba(154, 118, 253, 0.2)' }, // 7
+        'Ai': { title: 'Adobe Illustrator', line: 'Designing precise vector graphics, logos, and icons using Adobe Illustrator.', desc: 'Vector Design', img: 'images/Ai.png', bgColor: 'rgba(255, 154, 0, 0.2)' } // 8
+    };
+
+    const skillKeys = Object.keys(skillData);
+
+    const showBlenderDefault = () => {
+        const data = skillData['blender'];
+        document.getElementById('dynamic-main-title').innerText = data.title;
+        document.getElementById('dynamic-one-liner').innerText = data.line;
+        document.getElementById('main-skill-img').src = data.img;
+        document.getElementById('dynamic-desc').innerText = data.desc;
+        if(skillCard) {
+            skillCard.style.background = `radial-gradient(circle at 85% 50%, ${data.bgColor} 0%, rgba(255,255,255,0) 80%)`;
+        }
+        const blenderIcon = document.querySelector('[data-skill="blender"]');
+        if(blenderIcon) blenderIcon.classList.add('active');
+    };
+
+    showBlenderDefault();
+
+    // --- CLICK LOGIC ---
+    skillIcons.forEach(item => {
+        item.addEventListener('click', () => {
+            const skillKey = item.getAttribute('data-skill');
+            const data = skillData[skillKey];
+
+            skillIcons.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            if (skillCard && data.bgColor) {
+                skillCard.style.transition = 'background 0.8s ease';
+                skillCard.style.background = `radial-gradient(circle at 85% 50%, ${data.bgColor} 0%, rgba(255,255,255,0) 80%)`;
+            }
+
+            document.getElementById('dynamic-main-title').innerText = data.title;
+            document.getElementById('dynamic-one-liner').innerText = data.line;
+
+            const preview = document.getElementById('skill-display-area');
+            preview.style.opacity = '0';
+            preview.style.transform = 'translateY(20px)';
+
+            setTimeout(() => {
+                document.getElementById('main-skill-img').src = data.img;
+                document.getElementById('dynamic-desc').innerText = data.desc;
+                preview.style.opacity = '1';
+                preview.style.transform = 'translateY(0)';
+            }, 300);
+        });
+    });
+    // --- STICKY SKILLS & SMART SCROLL LOGIC ---
+let isScrolling = false;
+let scrollCount = 0;
+let scrollTimeout;
+
+window.addEventListener('wheel', (e) => {
+    const rect = skillCard.getBoundingClientRect();
+    // Skill card viewport-oda center-la irukkumbothu mattum ithu trigger aagum
+    const isInsideSkills = (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2);
+
+    if (isInsideSkills) {
+        const activeIcon = document.querySelector('.skill-icon-item.active');
+        if (!activeIcon) return;
+
+        const currentSkill = activeIcon.getAttribute('data-skill');
+        let currentIndex = skillKeys.indexOf(currentSkill);
+
+        const isUpwardMove = e.deltaY > 0;   // Down scroll (Moving 1 to 8)
+        const isDownwardMove = e.deltaY < 0; // Up scroll (Moving 8 to 1)
+
+        // --- DOUBLE SCROLL DETECTION ---
+        scrollCount++;
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => { scrollCount = 0; }, 250);
+
+        // 1. Double Scroll Trigger (Page Slide instantly)
+        if (scrollCount >= 2) {
+            scrollCount = 0; 
+            return; // e.preventDefault pannala, so page move aagum
+        }
+
+        // 2. Logic to Lock Page Scroll (Sticky Effect)
+        const isAtFirst = (currentIndex === 0);
+        const isAtLast = (currentIndex === skillKeys.length - 1);
+
+        // STICKY CONDITION: 
+        // 1. Downward scroll panna (8 reach aagara varai lock)
+        // 2. Upward scroll panna (1 reach aagara varai lock)
+        if ((isUpwardMove && !isAtLast) || (isDownwardMove && !isAtFirst)) {
+            e.preventDefault(); // STOP PAGE SCROLL
+
+            if (!isScrolling) {
+                isScrolling = true;
+
+                if (isUpwardMove) {
+                    currentIndex++; 
+                } else if (isDownwardMove) {
+                    currentIndex--; 
+                }
+
+                const nextIcon = document.querySelector(`[data-skill="${skillKeys[currentIndex]}"]`);
+                if (nextIcon) nextIcon.click();
+
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 500); // 0.5s cooldown for smooth transition
+            }
+        } 
+        // 3. If it's the last skill and you scroll down again, or first skill and scroll up:
+        // DO NOTHING (Let the default page scroll happen)
+    }
+}, { passive: false });
+});
+
+const mapObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.15 });
+
+// ITHAI KANDIPPA ADD PANNUNGA:
+document.querySelectorAll('.animate-map').forEach((el) => mapObserver.observe(el));
+
+
+
+// --- ELEMENT SELECTORS ---
+const modal = document.getElementById("projectModal");
+const modalTitle = document.getElementById("modalTitle");
+const closeBtn = document.querySelector(".close-modal");
+const viewButtons = document.querySelectorAll(".view-eye-btn");
+const allGalleries = document.querySelectorAll(".gallery-set");
+
+const fullViewer = document.getElementById("fullViewer");
+const viewerContent = document.getElementById("viewerContent");
+const fullViewerTitle = document.getElementById("fullViewerTitle");
+const closeViewer = document.querySelector(".close-viewer");
+
+// --- 1. MAIN MODAL LOGIC (Bento Grid Open) ---
+viewButtons.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        
+        // Modal Title set pannu
+        const categoryTitle = this.closest(".content-rise").querySelector("h3").innerText;
+        modalTitle.innerText = categoryTitle;
+
+        // Ella gallery-ayum hide panni target-ah mattum show pannu
+        allGalleries.forEach(gal => gal.classList.remove("active-gallery"));
+        const targetId = this.getAttribute("data-target");
+        const targetGallery = document.getElementById(targetId);
+        
+        if (targetGallery) {
+            targetGallery.classList.add("active-gallery");
+        }
+
+        // Modal Open & Body Scroll Lock
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+    });
+});
+// --- 2. FULL VIEW LOGIC (Shape-Based Perusaagum Logic) ---
+document.addEventListener('click', function(e) {
+    if (e.target && e.target.classList.contains('view-btn')) {
+        const item = e.target.closest('.item');
+        const media = item.querySelector('img') || item.querySelector('video');
+        const projectTitle = item.querySelector('p').innerText;
+        
+        // Viewer Title & Clear old content
+        fullViewerTitle.innerText = projectTitle;
+        viewerContent.innerHTML = ''; 
+
+        let clone;
+        if (media.tagName === 'IMG') {
+            clone = document.createElement('img');
+            clone.src = media.src;
+            clone.className = 'viewer-media';
+            
+            clone.onload = function() {
+                const ratio = this.naturalHeight / this.naturalWidth;
+                if (ratio > 1.2) {
+                    this.style.maxHeight = '90vh';
+                    this.style.width = 'auto';
+                } else if (ratio < 0.8) {
+                    this.style.width = '85%';
+                    this.style.height = 'auto';
+                } else {
+                    this.style.maxHeight = '80vh';
+                }
+            };
+        } else { // Inga thaan error irundhathu (Extra brace removed)
+            clone = document.createElement('video');
+            clone.src = media.src;
+            clone.className = 'viewer-media';
+            clone.controls = true;
+            clone.autoplay = true;
+            
+            clone.onloadedmetadata = function() {
+                const vRatio = this.videoHeight / this.videoWidth;
+                if (vRatio > 1) {
+                    this.style.height = '85vh';
+                    this.style.width = 'auto';
+                } else {
+                    this.style.width = '80%';
+                }
+            };
+        }
+
+        // Intha line-ah condition-ku veliya pota thaan Image/Video renduமே display aagum
+        viewerContent.appendChild(clone);
+        fullViewer.style.display = 'flex';
+        document.body.style.overflow = "hidden";
+    }
+});
+
+// --- 3. CLOSE FUNCTIONS ---
+
+// Modal close panna
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+};
+
+// Full Viewer close panna
+closeViewer.onclick = () => {
+    fullViewer.style.display = 'none';
+    viewerContent.innerHTML = ''; 
+    // Inga overflow hidden-ah modify pannala, 
+    // yenna main modal innum open-la thaan irukum.
+};
+
+// Vella click panna close aaga
+window.onclick = (e) => {
+    if (e.target == modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+    if (e.target == fullViewer) {
+        fullViewer.style.display = 'none';
+        viewerContent.innerHTML = '';
+    }
+};
+
+
+function moveSlider(direction) {
+    const slider = document.getElementById('glassSlider');
+    const scrollAmount = 410; // Card width + gap
+    if (direction === 1) {
+        slider.scrollLeft += scrollAmount;
+    } else {
+        slider.scrollLeft -= scrollAmount;
+    }
+}
+
+// Auto Update Copyright Year
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
